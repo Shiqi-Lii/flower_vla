@@ -1,0 +1,37 @@
+_target_: flower_vla.trainers.deepspeed_trainer.AccelerateTrainer
+_recursive_: false
+
+defaults:
+  - agent: flower_vla
+
+# Training-specific parameters
+training_cfg:
+  max_train_steps: 300000
+  max_eval_steps: 100
+  eval_every_n_steps: 5000
+  save_every_n_steps: 20000
+  batch_size: 128
+  use_torch_compile: False
+
+# Optimizer and scheduler parameters are grouped under optimizer_cfg.
+optimizer_cfg:
+  single_optimizer: True
+  learning_rate_dit: 1e-4
+  learning_rate_vlm: 1e-5
+  betas_dit: [0.9, 0.95]
+  betas_vlm: [0.9, 0.999]
+  weight_decay:
+    transformer_weight_decay: 0.1
+    vlm_weight_decay: 0.001
+
+
+# EMA configuration
+ema_cfg:
+  use_ema: False
+  decay: 0.999
+  rampup_ratio: 0.001
+  update_ema_every_n_steps: 1
+
+# DeepSpeed settings
+use_deepspeed: True
+

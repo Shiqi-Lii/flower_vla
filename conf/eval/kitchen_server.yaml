@@ -1,0 +1,30 @@
+# Path to the training run directory containing .hydra/config.yaml
+# # # finetuned ver of zero shpt
+# train_run_dir: /media/irl-admin/93a784d0-a1be-419e-99bd-9b2cd9df02dc/flower_data/models/horeka_trains/08-01-35
+# checkpoint: "checkpoint_60000"
+# single_image: false
+
+# # # 2025-02-08/23-04-16 is a dual image one, new codebvase
+# train_run_dir: /media/irl-admin/93a784d0-a1be-419e-99bd-9b2cd9df02dc/flower_data/models/2025-02-08/23-04-16
+# checkpoint: "checkpoint_80000"
+# single_image: false
+
+# # # horeka_trains/14-15-07 is a new single image policy
+# train_run_dir: /media/irl-admin/93a784d0-a1be-419e-99bd-9b2cd9df02dc/flower_data/models/horeka_trains/14-15-07
+# checkpoint: "checkpoint_340000"
+# single_image: true
+
+# # horeka_trains/14-15-07 is a new single image policy
+train_run_dir: /home/irl-admin/Omer/flower_baselines/vla_mp/logs/flower_models/FLOWER_FINETUNE_19-41-49
+checkpoint: "checkpoint_60000"
+single_image: true
+
+ensemble_strategy: null
+pred_action_horizon: 20
+multistep: 15
+
+use_ema: False
+use_torch_compile: True
+
+num_sampling_steps: 5
+use_dopri5: False

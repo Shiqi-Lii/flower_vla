@@ -1,0 +1,5 @@
+_target_: flower_vla.agents.lang_encoders.florence_tokens.TokenVLM
+_recursive_: false
+
+model_name: "microsoft/Florence-2-large"
+

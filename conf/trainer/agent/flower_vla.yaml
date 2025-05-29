@@ -1,0 +1,46 @@
+_target_: flower_vla.agents.ddp_wrapper.DDPAgentWrapper
+_recursive_: False
+
+obs_modalities: ${obs_modalities}
+goal_modalities: ${goal_modalities}
+img_modalities: ${img_modalities}
+lang_modalities: ${lang_modalities}
+target_modality: ${target_modality}
+
+agent: 
+  _target_: flower_vla.agents.flower.FlowerVLA
+  _recursive_: false
+  obs_modalities: ${obs_modalities}
+  goal_modalities: ${goal_modalities}
+  img_modalities: ${img_modalities}
+  lang_modalities: ${lang_modalities}
+  target_modality: ${target_modality}
+  vlm_path: microsoft/Florence-2-large
+  freeze_florence: False
+  freeze_vision_tower: False
+  freeze_embeddings_only: True
+  use_second_view: True
+  token_dropout: 0.2
+  sampling_type: 'ln'
+  second_view_key: 'image_secondary'
+  multistep: ${act_seq_len}
+  num_sampling_steps: 4
+  lowdim_obs_dim: ${obs_dim}
+  action_dim: ${act_dim}
+  act_window_size: ${act_seq_len}
+  use_causal_attention: True
+  use_proprio: True
+  # flow configuration
+  action_type_adaln: True
+  dit_dim: 1024
+  n_heads: 16
+  n_layers: 12
+  attn_pdrop: 0.1
+  resid_pdrop: 0.1
+  mlp_pdrop: 0.1
+  use_cross_attn: True
+  use_adaln_cond: False
+  use_rope: True
+  use_nope: False
+  query_seq_len: 100
+  rope_theta: 1000.0

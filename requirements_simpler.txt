@@ -1,0 +1,32 @@
+absl-py>=0.12.0
+accelerate
+dlimp @ git+https://github.com/kvablack/dlimp@5edaa4691567873d495633f2708982b42edf1972
+einops
+einops_exts
+ftfy
+gcsfs
+hydra-core==1.1.1
+matplotlib==3.5.1
+mediapy
+numpy>=1.24.3
+omegaconf
+opencv-python
+scipy
+tensorflow==2.15.0
+tensorflow-datasets==4.9.2
+tensorflow_graphics==2021.12.3
+tensorflow_hub
+termcolor
+timm
+torch
+torchdiffeq
+torchsde
+tqdm>=4.60.0
+transformers==4.46.3
+vit-pytorch==1.4.4
+wandb
+
+# Local installs
+-e ./SimplerEnv/ManiSkill2_real2sim
+-e ./SimplerEnv
+-e .

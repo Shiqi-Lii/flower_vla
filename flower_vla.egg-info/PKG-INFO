@@ -1,0 +1,8 @@
+Metadata-Version: 2.2
+Name: flower_vla
+Version: 0.1.1
+Author: Moritz Reuss & Marcel Rühle
+Requires-Python: >=3.9
+License-File: LICENSE
+Dynamic: author
+Dynamic: requires-python

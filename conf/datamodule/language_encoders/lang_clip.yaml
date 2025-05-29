@@ -1,0 +1,4 @@
+_target_: flower_vla.agents.lang_encoders.clip_tokens.TokenLangClip # !!!NEEDS TO MATCH conf.trainer.agent.input_encoder.goal_encoder.language_encoder!!!
+_recursive_: false
+
+model_name: ViT-B/32

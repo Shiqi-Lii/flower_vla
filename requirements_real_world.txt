@@ -1,0 +1,26 @@
+numpy>1.2
+hydra-core==1.1.1
+matplotlib==3.5.1
+opencv-python
+omegaconf
+ftfy
+accelerate
+# torch==2.0.1+cu118
+transformers==4.25.1
+vit-pytorch==1.4.4
+scipy
+einops
+tqdm
+termcolor
+wandb
+einops_exts
+tensorflow_hub
+mediapy
+timm
+torchsde
+torchdiffeq
+# real robot experiments
+-e ./evaluating_real_world/irl_polymetis/polymetis
+-e ./evaluating_real_world
+# ---
+-e .
